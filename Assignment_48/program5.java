@@ -1,0 +1,69 @@
+// ! Write a Java program which accept string from user and display below pattern
+/*
+Input : Hello
+Output : 
+    H
+    H   e
+    H   e   l
+    H   e   l   l
+    H   e   l   l   o
+    H   e   l   l
+    H   e   l
+    H   e
+    H
+ */
+
+import java.util.Scanner;
+
+class Pattern
+{
+    private String str;
+
+    public Pattern(String a)
+    {
+        this.str = a;
+    }
+
+    public void DisplayPattern()
+    {
+        int i = 0, j = 0;
+        char Arr[] = this.str.toCharArray();
+
+        for(i = 0; i < Arr.length; i++)
+        {
+            for(j = 0; j < i+1; j++)
+            {
+                System.out.print(Arr[j]+"\t");
+            }
+            System.out.println("");
+        }
+
+        for(i = 1; i < Arr.length; i++)
+        {
+            for(j = 0; j < Arr.length-i; j++)
+            {
+                System.out.print(Arr[j]+"\t");
+            }
+            System.out.println("");
+        }
+
+    }
+
+}
+
+class program5
+{
+    public static void main(String A[])
+    {
+        Scanner sobj = new Scanner(System.in);
+        System.out.println("Enter the string : ");
+        String str = sobj.nextLine();
+
+        Pattern pobj = new Pattern(str);
+
+        pobj.DisplayPattern();
+
+        sobj = null;
+        pobj = null;
+    }
+}

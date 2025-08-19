@@ -28,6 +28,8 @@ class Pattern
 
         System.out.println("Enter number of columns : ");
         this.iCol = sobj.nextInt();
+
+        sobj = null;
     }
 
     public void DisplayPattern()
@@ -55,5 +57,7 @@ class program3
 
         pobj.Accept();
         pobj.DisplayPattern();
+
+        pobj = null;
     }
 }
