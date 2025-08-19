@@ -1,11 +1,10 @@
 // ! Write a Java program which accept number of rows and number of columns from user and display below pattern
 /*
-Input : iRow - 4    iCol - 4
+Input : iRow - 3    iCol - 5
 Output : 
-    A   B   C   D
-    A   B   C   D
-    A   B   C   D
-    A   B   C   D
+    A   A   A   A   A
+    B   B   B   B   B
+    C   C   C   C   C
  */
 
 import java.util.Scanner;
@@ -36,9 +35,9 @@ class Pattern
         int i = 0, j = 0;
         char ch = '\0';
 
-        for(i = 0; i < iRow; i++)
+        for(i = 0, ch = 'A'; i < iRow; i++, ch++)
         {
-            for(j = 0, ch = 'A'; j < iCol; j++, ch++)
+            for(j = 0; j < iCol; j++)
             {
                 System.out.print(ch+"\t");
             }
@@ -48,7 +47,7 @@ class Pattern
 
 }
 
-class program1
+class program3
 {
     public static void main(String A[])
     {

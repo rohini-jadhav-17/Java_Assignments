@@ -3,9 +3,9 @@
 Input : iRow - 4    iCol - 4
 Output : 
     A   B   C   D
+    a   b   c   d
     A   B   C   D
-    A   B   C   D
-    A   B   C   D
+    a   b   c   d
  */
 
 import java.util.Scanner;
@@ -34,13 +34,21 @@ class Pattern
     public void DisplayPattern()
     {
         int i = 0, j = 0;
-        char ch = '\0';
+        char ch1 = '\0';
+        char ch2 = '\0';
 
         for(i = 0; i < iRow; i++)
         {
-            for(j = 0, ch = 'A'; j < iCol; j++, ch++)
+            for(j = 0, ch1 = 'A', ch2 = 'a'; j < iCol; j++, ch1++, ch2++)
             {
-                System.out.print(ch+"\t");
+                if(i % 2 == 0)
+                {
+                    System.out.print(ch1+"\t");
+                }
+                else
+                {
+                    System.out.print(ch2+"\t");
+                }
             }
             System.out.println("");
         }
@@ -48,7 +56,7 @@ class Pattern
 
 }
 
-class program1
+class program2
 {
     public static void main(String A[])
     {
